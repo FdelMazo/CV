@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-lcroman,es-notilde]{babel} % 
+
+% Márgenes
+\usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry}
+
+% Lastpage para el footer (x paginas de y)
+% Fontawesome para iconos en la cabecera
+% Xpatch para cambiar el formato del titulo
+\usepackage{lastpage,fontawesome,xpatch}
+
+% Sacar el 'subject' del PDF (era 'Resume of...')
+\AtEndPreamble{\hypersetup{pdfsubject=}}
+
+% Espaciar más los items
+\let\OLDitemize\itemize
+\renewcommand\itemize{\OLDitemize\addtolength{\itemsep}{2pt}}
+
+% Comando de mes en español, para el footer
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or Enero 
+  \or Febrero 
+  \or Marzo 
+  \or Abril 
+  \or Mayo 
+  \or Junio 
+  \or Julio 
+  \or Agosto 
+  \or Septiembre 
+  \or Octubre 
+  \or Noviembre 
+  \or Diciembre 
+  \fi
+}
+
+% Cambiar formato de título (en vez de 'Autor | Curriculum' ahora es 'Autor \n Curriculum')
+\makeatletter
+\xpatchcmd{\makehead}{\titlestyle{~|~\@title}}{\par\vskip1ex\titlestyle{\@title}}{}{}
+\makeatother
+
+% Achicar el subtítulo ('Curriculum Vitae')
+\renewcommand*{\titlefont}{\fontsize{21}{25}\mdseries\upshape} 
+
+% Header y Footer
+\makeatletter
+\fancyhead[R]{\color{gray}\@firstname{}~\@familyname{}}
+\fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
+\makeatother
+
+% Solo footer para la primera pagina
+\fancypagestyle{onlyfooter}{
+\fancyhf{}
+\fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
+}
