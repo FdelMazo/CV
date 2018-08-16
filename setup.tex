@@ -1,5 +1,19 @@
+\moderncvstyle{banking}
+\moderncvcolor{blue} % blue, orange, green, red, purple, grey, black
 \usepackage[utf8]{inputenc}
-\usepackage[spanish,es-lcroman,es-notilde]{babel} % 
+\usepackage[spanish,es-lcroman,es-notilde,english]{babel} 
+
+% Setup de cambio de idiomas
+\usepackage{ifthen}
+\newif\ifspa
+\newif\ifen
+\newcommand{\spa}[1]{\ifspa#1\fi}
+\newcommand{\en}[1]{\ifen#1\fi}
+
+% Cambiar entre idiomas: Encapsular texto de cada idioma en las tags \spa{texto} o \en{text}
+% Para usar en español, dejar \spatrue descomentado. Para usar en ingles, dejar \entrue descomentado
+\spatrue
+%\entrue
 
 % Márgenes
 \usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry}
@@ -19,18 +33,18 @@
 % Comando de mes en español, para el footer
 \newcommand{\MONTH}{%
   \ifcase\the\month
-  \or Enero 
-  \or Febrero 
-  \or Marzo 
-  \or Abril 
-  \or Mayo 
-  \or Junio 
-  \or Julio 
-  \or Agosto 
-  \or Septiembre 
-  \or Octubre 
-  \or Noviembre 
-  \or Diciembre 
+  \or \spa{Enero}\en{January} 
+  \or \spa{Febrero}\en{February} 
+  \or \spa{Marzo}\en{March} 
+  \or \spa{Abril}\en{April} 
+  \or \spa{Mayo}\en{May} 
+  \or \spa{Junio}\en{June} 
+  \or \spa{Julio}\en{July} 
+  \or \spa{Agosto}\en{August} 
+  \or \spa{Septiembre}\en{September} 
+  \or \spa{Octubre}\en{October} 
+  \or \spa{Noviembre}\en{November} 
+  \or \spa{Diciembre}\en{December} 
   \fi
 }
 
