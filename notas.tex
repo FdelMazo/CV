@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{moderncv}
+\usepackage{import} \import{./}{setup.tex}
+
+\name{Federico}{del Mazo}
+\title{
+    Materias aprobadas en FIUBA
+}
+
+\begin{document}
+
+\section{Materias aprobadas en la Facultad de Ingeniería de la Universidad de Buenos Aires}
+\cventry{12/12/01}{Libro 95 · Folio 4264}{Algoritmos y Programación I (75.40)}{Calificación: 8}{}{}
+\cventry{16/02/17}{Libro 62 · Folio 2705}{Física I (62.01)}{Calificación: 4}{}{}
+\cventry{21/02/17}{Libro 61 · Folio 2637}{Análisis Matemático II (61.03)}{Calificación: 6}{}{}
+\cventry{03/07/17}{Libro 95 · Folio 4712}{Algoritmos y Programación II (75.41)}{Calificación: 9}{}{}
+\cventry{10/08/17}{Libro 63 · Folio 2187}{Química (63.01)}{Calificación: 5}{}{}
+\cventry{18/12/17}{Libro 95 · Folio 5174}{Algoritmos y Programación III (75.07)}{Calificación: 6}{}{}
+\cventry{16/07/18}{Libro 61 · Folio 2923}{Matemática Discreta (61.07)}{Calificación: 4}{}{}
+
+\newcommand{\MONTHH}{
+  \ifcase\the\month
+  \or \spa{Enero}\en{January} 
+  \or \spa{Febrero}\en{February} 
+  \or \spa{Marzo}\en{March} 
+  \or \spa{Abril}\en{April} 
+  \or \spa{Mayo}\en{May} 
+  \or \spa{Junio}\en{June} 
+  \or \spa{Julio}\en{July} 
+  \or \spa{Agosto}\en{August} 
+  \or \spa{Septiembre}\en{September} 
+  \or \spa{Octubre}\en{October} 
+  \or \spa{Noviembre}\en{November} 
+  \or \spa{Diciembre}\en{December} 
+  \fi
+}
+\fancyfoot[R]{\color{gray}\textit{\MONTHH \the\year}}
+
+\end{document}

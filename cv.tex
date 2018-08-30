@@ -1,7 +1,5 @@
-% sudo apt-get install texlive texlive-lang-spanish
-% pdflatex cv.tex
-
 \documentclass[11pt,a4paper]{moderncv}
+\usepackage{pdfpages}
 \usepackage{import} \import{./}{setup.tex}
 
 \name{Federico}{del Mazo}
@@ -80,4 +78,6 @@ Joven estudiante en busca de iniciarse en el mercado laboral con el objetivo de 
 \item \textbf{Música} Entre los 12 y 18 años participé en la Banda del Colegio Ward tocando la trompeta y el piano. Con esta fuí a diversas convenciones musicales de Argentina.
 \end{itemize}
 
+\IfFileExists{./notas.pdf}{\includepdf[pages=-]{notas.pdf}}{}
 \end{document}
+
