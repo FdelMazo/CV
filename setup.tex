@@ -11,9 +11,12 @@
 \newcommand{\en}[1]{\ifen#1\fi}
 
 % Cambiar entre idiomas: Encapsular texto de cada idioma en las tags \spa{texto} o \en{text}
-% Para usar en español, dejar \spatrue descomentado. Para usar en ingles, dejar \entrue descomentado
-\spatrue
-%\entrue
+% Para usar en español, compilar normalmente. Para usar en ingles, pdflatex "\def\inenglish{1} \input{cv.tex}"
+\ifdefined\inenglish
+  \entrue
+\else
+  \spatrue
+\fi
 
 % Márgenes
 \usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry}
