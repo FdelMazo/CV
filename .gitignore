@@ -1,5 +1,7 @@
 *.aux
 *.log
 *.out
+*.fls
+*.fdb_latexmk
 Fotos/
 Random/

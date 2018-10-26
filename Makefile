@@ -19,4 +19,4 @@ english:
 	$(MAKE) clean
 
 clean:
-	rm -rf *.aux *.log *.out
+	rm -rf *.aux *.log *.out *.fls *.fdb_latexmk
