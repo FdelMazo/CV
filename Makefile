@@ -14,9 +14,9 @@ english:
 	mv cv.pdf cv-light.pdf
 	pdflatex "\def\inenglish{1} \input{notas.tex}"
 	pdflatex "\def\inenglish{1} \input{cv.tex}"
-	mv cv.pdf cv-full.pdf
-	mv cv-light.pdf cv.pdf
+	mv cv.pdf cv-full-en.pdf
+	mv cv-light.pdf cv-en.pdf
 	$(MAKE) clean
 
 clean:
-	rm -rf *.aux *.log *.out *.fls *.fdb_latexmk
+	rm -rf *.aux *.log *.out *.fls *.fdb_latexmk notas.pdf
