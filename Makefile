@@ -25,3 +25,7 @@ english:
 
 clean:
 	rm -rf *.aux *.log *.out *.fls *.fdb_latexmk notas.pdf
+
+cleanclean:
+	$(MAKE) clean
+	rm -rf *.pdf
