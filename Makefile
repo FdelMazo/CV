@@ -1,9 +1,9 @@
-all:
+all: cleanclean
 	$(MAKE) spanish
 	$(MAKE) english
 	ln -s cv-es.pdf cv.pdf
 
-spanish:
+spanish: clean
 	pdflatex cv.tex
 	pdflatex cv.tex
 	mv cv.pdf cv-light.pdf
@@ -13,7 +13,7 @@ spanish:
 	mv cv-light.pdf cv-es.pdf
 	$(MAKE) clean
 
-english:
+english: clean
 	pdflatex "\def\inenglish{1} \input{cv.tex}"
 	pdflatex "\def\inenglish{1} \input{cv.tex}"
 	mv cv.pdf cv-light.pdf
@@ -26,6 +26,5 @@ english:
 clean:
 	rm -rf *.aux *.log *.out *.fls *.fdb_latexmk notas.pdf
 
-cleanclean:
-	$(MAKE) clean
+cleanclean: clean
 	rm -rf *.pdf

@@ -19,7 +19,7 @@
 \fi
 
 % Márgenes
-\usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry}
+\usepackage[scale=0.75, top=2cm, bottom=2.5cm]{geometry}
 
 % Lastpage para el footer (x paginas de y)
 % Fontawesome para iconos en la cabecera
@@ -64,13 +64,21 @@
 % Header y Footer
 \makeatletter
 \fancyhead[R]{\color{gray}\@firstname{}~\@familyname{}}
-\fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
-\makeatother
+\ifnum\value{page} > 1
+  \fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
+\else
+  \fancyfoot[R]{\color{gray}\textit{\MONTH \the\year}}
+\fi
+  \makeatother
 
 % Solo footer para la primera pagina
 \fancypagestyle{onlyfooter}{
 \fancyhf{}
-\fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
+\ifnum\value{page} > 1
+  \fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
+\else
+  \fancyfoot[R]{\color{gray}\textit{\MONTH \the\year}}
+\fi
 }
 
 % Cambiar color de boton de lenguajes. Mientras mas cerca de 1, mas claro.
