@@ -24,7 +24,9 @@
 % Lastpage para el footer (x paginas de y)
 % Fontawesome para iconos en la cabecera
 % Xpatch para cambiar el formato del titulo
-\usepackage{lastpage,fontawesome,xpatch}
+% Framed (environment shaded*) y textpos (environment textbox*) para el 'boton' de cambio de lenguaje
+\usepackage{lastpage,fontawesome,xpatch,framed}
+\usepackage[absolute,overlay]{textpos}
 
 % Sacar el 'subject' del PDF (era 'Resume of...')
 \AtEndPreamble{\hypersetup{pdfsubject=}}
@@ -70,3 +72,8 @@
 \fancyhf{}
 \fancyfoot[R]{\color{gray}\textit{\MONTH \the\year \\ \thepage/\pageref*{LastPage}}}
 }
+
+% Cambiar color de boton de lenguajes. Mientras mas cerca de 1, mas claro.
+\definecolor{shadecolor}{gray}{0.9}
+
+
