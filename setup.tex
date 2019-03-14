@@ -25,15 +25,16 @@
 % Fontawesome para iconos en la cabecera
 % Xpatch para cambiar el formato del titulo
 % Framed (environment shaded*) y textpos (environment textblock*) para el 'boton' de cambio de lenguaje
-\usepackage{lastpage,fontawesome,xpatch,framed}
+% Setspace para el interlineado
+\usepackage{lastpage,fontawesome,xpatch,framed,setspace}
 \usepackage[absolute,overlay]{textpos}
+
+% Interlineado 1.5
+\onehalfspacing
+
 
 % Sacar el 'subject' del PDF (era 'Resume of...')
 \AtEndPreamble{\hypersetup{pdfsubject=}}
-
-% Espaciar más los items
-\let\OLDitemize\itemize
-\renewcommand\itemize{\OLDitemize\addtolength{\itemsep}{6pt}}
 
 % Comando de mes en español, para el footer
 \newcommand{\MONTH}{%
