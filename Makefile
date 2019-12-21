@@ -1,7 +1,7 @@
-all: cleanclean
+all: clean
 	$(MAKE) spanish
 	$(MAKE) english
-	ln -s cv-es.pdf cv.pdf
+	ln -s cv-en.pdf cv.pdf
 
 spanish: clean
 	pdflatex cv.tex
