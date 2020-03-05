@@ -32,8 +32,10 @@
 % Interlineado 1.5
 \onehalfspacing
 
-% Sacar el 'subject' del PDF (era 'Resume of...')
-\AtEndPreamble{\hypersetup{pdfsubject=}}
+% Sacar el 'subject' del PDF (era 'Resume of...') y cambiar el titulo (para que no sea "nombre - titulo")
+\makeatletter
+\AtEndPreamble{\hypersetup{pdfsubject={},pdftitle={\@firstname~\@familyname}}}
+\makeatother
 
 % Comando de mes en español, para el footer
 \newcommand{\MONTH}{%
