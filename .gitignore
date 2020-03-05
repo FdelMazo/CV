@@ -2,7 +2,4 @@
 *.log
 *.out
 *.fls
-*.fdb_latexmk
-Fotos/
-Random/
-notas.pdf
+.fdb_latexmk
