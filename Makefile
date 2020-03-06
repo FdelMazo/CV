@@ -1,8 +1,8 @@
 all: clean
 	$(MAKE) spanish
 	$(MAKE) english
-	ln -s cv-en.pdf cv.pdf
-
+	pdftoppm cv-en.pdf cv -png -rx 300 -ry 300
+	
 spanish: clean
 	pdflatex cv.tex
 	pdflatex cv.tex
