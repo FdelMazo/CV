@@ -1,7 +1,10 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue} % blue, orange, green, red, purple, grey, black
 \usepackage[utf8]{inputenc}
-\usepackage[spanish,es-lcroman,es-notilde,english]{babel} 
+\usepackage[spanish,es-lcroman,es-notilde,english]{babel}
+
+% Cambiar el bullet de \item por >
+\renewcommand{\labelitemi}{\scriptsize\color{color1}{\faCaretRight}}
 
 % Setup de cambio de idiomas
 \usepackage{ifthen}
@@ -40,18 +43,18 @@
 % Comando de mes en español, para el footer
 \newcommand{\MONTH}{%
   \ifcase\the\month
-  \or \spa{Enero}\en{January} 
-  \or \spa{Febrero}\en{February} 
-  \or \spa{Marzo}\en{March} 
-  \or \spa{Abril}\en{April} 
-  \or \spa{Mayo}\en{May} 
-  \or \spa{Junio}\en{June} 
-  \or \spa{Julio}\en{July} 
-  \or \spa{Agosto}\en{August} 
-  \or \spa{Septiembre}\en{September} 
-  \or \spa{Octubre}\en{October} 
-  \or \spa{Noviembre}\en{November} 
-  \or \spa{Diciembre}\en{December} 
+  \or \spa{Enero}\en{January}
+  \or \spa{Febrero}\en{February}
+  \or \spa{Marzo}\en{March}
+  \or \spa{Abril}\en{April}
+  \or \spa{Mayo}\en{May}
+  \or \spa{Junio}\en{June}
+  \or \spa{Julio}\en{July}
+  \or \spa{Agosto}\en{August}
+  \or \spa{Septiembre}\en{September}
+  \or \spa{Octubre}\en{October}
+  \or \spa{Noviembre}\en{November}
+  \or \spa{Diciembre}\en{December}
   \fi
 }
 
@@ -61,7 +64,7 @@
 \makeatother
 
 % Achicar el subtítulo ('Curriculum Vitae')
-\renewcommand*{\titlefont}{\fontsize{21}{25}\mdseries\upshape} 
+\renewcommand*{\titlefont}{\fontsize{21}{25}\mdseries\upshape}
 
 % Header y Footer
 \makeatletter
@@ -85,5 +88,3 @@
 
 % Cambiar color de boton de lenguajes. Mientras mas cerca de 1, mas claro.
 \definecolor{shadecolor}{gray}{0.9}
-
-
