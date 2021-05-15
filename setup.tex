@@ -3,8 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-lcroman,es-notilde,english]{babel}
 
-% Cambiar el bullet de \item por >
-\renewcommand{\labelitemi}{\scriptsize\color{color1}{\faCaretRight}}
+% Agregar distintos bullets con simbolos como rombo y >
+\usepackage{amssymb}
+\newcommand{\diamondbullet}[0]{\normalsize \raisebox{0.2ex}{$\scriptstyle\color{color1}{\blacklozenge}$}}
+\newcommand{\caretbullet}[0]{\scriptsize\color{color1}{\faCaretRight}}
+
+% Paquete para agregar margenes a los itemizes
+\usepackage{enumitem}
 
 % Setup de cambio de idiomas
 \usepackage{ifthen}
