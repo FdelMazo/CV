@@ -93,3 +93,11 @@
 
 % Cambiar color de boton de lenguajes. Mientras mas cerca de 1, mas claro.
 \definecolor{shadecolor}{gray}{0.9}
+
+% Tech chips
+\usepackage{tcolorbox}
+\definecolor{mylightblue}{rgb}{0.122, 0.435, 0.698}
+\newtcbox{\mycolorbox}{on line, colframe=mylightblue, colback=mylightblue!5!white,
+  boxrule=0.5pt,arc=4pt,boxsep=0pt,left=2pt,right=2pt,top=2pt,bottom=2pt}
+
+\newcommand*{\tech}[1]{\footnotesize\mycolorbox{\strut #1}}
